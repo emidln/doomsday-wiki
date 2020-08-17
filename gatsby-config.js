@@ -24,6 +24,14 @@ module.exports = {
       options: {name: 'puzzles', path: `${__dirname}/puzzles/`},
       resolve: 'gatsby-source-filesystem',
     },
+    {
+      options: {
+        langKeyDefault: 'en',
+        prefixDefault: true,
+        useLangKeyLayout: false,
+      },
+      resolve: 'gatsby-plugin-i18n',
+    },
     'gatsby-plugin-material-ui',
     'gatsby-plugin-sass',
     'gatsby-transformer-json',

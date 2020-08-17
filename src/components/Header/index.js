@@ -1,12 +1,13 @@
 import React, { useContext } from 'react';
 import MenuIcon from 'mdi-react/MenuIcon';
 import AppBar from '@material-ui/core/AppBar';
-import Grid from '@material-ui/core/Grid';
+import Box from '@material-ui/core/Box';
 import IconButton from '@material-ui/core/IconButton';
 import Toolbar from '@material-ui/core/Toolbar';
 import { useTheme } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { SidebarContext } from '../../contexts/Sidebar';
+import Rosetta from './Rosetta';
 import useStyles from './styles';
 
 export default function Header() {
@@ -17,13 +18,12 @@ export default function Header() {
   return (
     <AppBar className={classes.root} position="static">
       <Toolbar>
-        <Grid container alignItems="center" wrap="nowrap">
-          {isMobile && (
-            <Grid item style={{marginRight: '1em'}}>
-              <IconButton color="inherit" onClick={toggleDrawer()}><MenuIcon /></IconButton>
-            </Grid>
-          )}
-        </Grid>
+        {isMobile && (
+          <IconButton color="inherit" onClick={toggleDrawer()}>
+            <MenuIcon />
+          </IconButton>
+        )}
+        <Rosetta component={Box} ml="auto" />
       </Toolbar>
     </AppBar>
   );
