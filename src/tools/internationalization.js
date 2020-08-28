@@ -12,6 +12,4 @@ i.use(Backend).use(Detector).use(initReactI18next).init({
   },
   fallbackLng: 'en',
   interpolation: {escapeValue: false},
-  ns: [],
-  supportedLngs: ['en', 'fr', 'zh'],
 });

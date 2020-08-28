@@ -1,6 +1,6 @@
+import React, { useEffect, useState } from 'react';
 import TranslateIcon from 'mdi-react/TranslateIcon';
 import PropTypes from 'prop-types';
-import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import IconButton from '@material-ui/core/IconButton';
 import Menu from '@material-ui/core/Menu';

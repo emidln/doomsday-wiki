@@ -11,19 +11,19 @@ import Welcome from '../components/Welcome';
 export default function PageHome() {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.mixins.sidebar.treshold);
-  const [ t ] = useTranslation('index');
+  const [ t ] = useTranslation();
   return (
     <>
       <Grid container spacing={isMobile ? 2 : 3}>
         <Grid item lg={6} xs={12}>
           <Typography color="textSecondary" component={Box} mb={1} ml={1} variant="subtitle1">
-            {t('welcome')}
+            {t('index.welcome')}
           </Typography>
           <Box><Welcome /></Box>
         </Grid>
         <Grid item lg={6} xs={12}>
           <Typography color="textSecondary" component={Box} mb={1} ml={1} variant="subtitle1">
-            {t('articles')}
+            {t('index.articles')}
           </Typography>
           <Box><Articles top /></Box>
         </Grid>

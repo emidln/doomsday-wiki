@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import Divider from '@material-ui/core/Divider';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
@@ -8,14 +9,15 @@ import { cards } from '../../tools/scryfall';
 import Table from '../Table';
 
 export default function Body() {
+  const [ t ] = useTranslation();
   return !!Object.keys(cards).length && (
     <>
       <Divider />
       <Table minimal>
         <TableHead>
           <TableRow>
-            <TableCell>Notation</TableCell>
-            <TableCell>Card</TableCell>
+            <TableCell>{t('sidebar.body.notation')}</TableCell>
+            <TableCell>{t('sidebar.body.card')}</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
